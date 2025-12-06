@@ -1,0 +1,878 @@
+/* PublicTransport.css */
+.public-transport-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+/* Header Styling */
+.public-transport-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.public-transport-header h1 {
+  font-size: 2.2rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.public-transport-header p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Tab Navigation */
+.transport-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tab-btn:hover {
+  background-color: #e8e8e8;
+}
+
+.tab-btn.active {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Search and Filters */
+.search-and-filters {
+  margin-bottom: 25px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-bar svg {
+  color: #666;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.transport-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.filter-btn {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  background: #e0e0e0;
+}
+
+.filter-btn.active {
+  background: #0056b3;
+  color: white;
+  border-color: #0056b3;
+}
+
+/* Routes List */
+.routes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.route-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-left: 5px solid #ccc;
+}
+
+.route-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.route-card.active {
+  grid-column: 1 / -1;
+  border-left-width: 7px;
+}
+
+.route-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.route-type-icon {
+  font-size: 24px;
+  margin-right: 15px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 50%;
+}
+
+.route-basic-info {
+  flex-grow: 1;
+}
+
+.route-basic-info h3 {
+  font-size: 1.1rem;
+  margin: 0 0 5px 0;
+}
+
+.route-operator {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+.route-status {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.route-status[data-status="delayed"] {
+  background-color: #fff8e1;
+  color: #f57f17;
+}
+
+.route-summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.route-detail {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Route Details Expanded View */
+.route-details {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+}
+
+.route-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.route-stops h4, .route-features h4, .route-crowd-info h4 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.stops-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.stops-list::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+.stop-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.stop-marker {
+  width: 20px;
+  height: 20px;
+  background-color: #0056b3;
+  border-radius: 50%;
+  margin-right: 15px;
+  z-index: 2;
+}
+
+.stop-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stop-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.stop-time {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.feature-icon {
+  color: #0056b3;
+}
+
+.crowd-level {
+  padding: 8px 15px;
+  background-color: #e8f5e9;
+  color: #388e3c;
+  border-radius: 15px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.crowd-level.high, .crowd-level.very-high {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.crowd-level.moderate {
+  background-color: #fff8e1;
+  color: #f57f17;
+}
+
+.crowd-level.low {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.close-details-btn {
+  display: block;
+  margin: 20px auto 0;
+  padding: 8px 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.close-details-btn:hover {
+  background-color: #e0e0e0;
+}
+
+/* No Routes Found State */
+.no-routes-found {
+  text-align: center;
+  padding: 40px 0;
+  color: #666;
+}
+
+.no-results-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+/* Route Planner Tab */
+.route-planner-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.planner-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.planner-header h2 {
+  font-size: 1.8rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.planner-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.route-planner-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.location-input {
+  display: flex;
+  align-items: center;
+}
+
+.location-input input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.current-location-btn {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.current-location-btn:hover {
+  background-color: #004494;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.transport-preference, .route-preferences, .accessibility-options {
+  margin-bottom: 20px;
+}
+
+.transport-preference span, .route-preferences span {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.preference-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.preference-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.accessibility-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.plan-route-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.plan-route-btn:hover {
+  background-color: #004494;
+}
+
+.popular-destinations {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.popular-destinations h3 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.popular-destination-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.popular-destination-buttons button {
+  padding: 8px 15px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popular-destination-buttons button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Fares Tab */
+.fares-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.fares-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.fares-header h2 {
+  font-size: 1.8rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.fares-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.fare-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.fare-category {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.category-header {
+  background-color: #0056b3;
+  color: white;
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fare-details {
+  padding: 15px;
+}
+
+.fare-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.fare-name {
+  font-weight: 500;
+}
+
+.concessions {
+  padding-top: 15px;
+}
+
+.concessions p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.fare-info-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.fare-note {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.download-fare-chart-btn {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.download-fare-chart-btn:hover {
+  background-color: #004494;
+}
+
+/* Updates Tab */
+.updates-container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.updates-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.updates-header h2 {
+  font-size: 1.8rem;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
+
+.updates-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.last-updated {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 10px;
+}
+
+.service-updates-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.update-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  position: relative;
+  border-top: 5px solid #ccc;
+}
+
+.update-card.disruption {
+  border-top-color: #d32f2f;
+}
+
+.update-card.planned-maintenance {
+  border-top-color: #ff9800;
+}
+
+.update-card.service-enhancement {
+  border-top-color: #4caf50;
+}
+
+.update-card.special-service {
+  border-top-color: #9c27b0;
+}
+
+.update-type-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #f5f5f5;
+}
+
+.update-card.disruption .update-type-badge {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.update-card.planned-maintenance .update-type-badge {
+  background-color: #fff8e1;
+  color: #ff9800;
+}
+
+.update-card.service-enhancement .update-type-badge {
+  background-color: #e8f5e9;
+  color: #4caf50;
+}
+
+.update-card.special-service .update-type-badge {
+  background-color: #f3e5f5;
+  color: #9c27b0;
+}
+
+.update-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.update-mode-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0056b3;
+  color: white;
+  border-radius: 50%;
+}
+
+.update-header h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.update-status {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.update-status span {
+  font-weight: 500;
+}
+
+.update-status span.minor-delays, .update-status span.partial-closure {
+  color: #ff9800;
+}
+
+.update-status span.major-disruption {
+  color: #d32f2f;
+}
+
+.update-status span.increased-frequency, .update-status span.extended-hours {
+  color: #4caf50;
+}
+
+.update-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.update-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.update-time, .update-resolution {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.alternative-routes {
+  font-size: 0.9rem;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px dashed #ddd;
+}
+
+.updates-footer {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.updates-footer p {
+  margin-bottom: 15px;
+  color: #666;
+}
+
+.subscription-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.subscription-form input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+.subscribe-btn {
+  padding: 10px 20px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #004494;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .transport-tabs {
+    flex-direction: column;
+  }
+  
+  .routes-list, .fare-categories, .service-updates-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .update-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .public-transport-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .search-and-filters {
+    flex-direction: column;
+  }
+  
+  .subscription-form {
+    flex-direction: column;
+  }
+  
+  .subscription-form input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .subscribe-btn {
+    border-radius: 4px;
+  }
+}

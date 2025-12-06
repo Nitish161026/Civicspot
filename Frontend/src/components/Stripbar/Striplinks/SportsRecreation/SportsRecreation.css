@@ -1,0 +1,568 @@
+/* Sports & Recreation Component Styles - Dynamic & Energetic Theme */
+
+.sports-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.sp-hero {
+  background: linear-gradient(135deg, 
+    #ff5e62 0%, 
+    #ff9966 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border-radius: 0 0 30% 30% / 80px;
+}
+
+.sp-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+.sp-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sp-hero-icon {
+  font-size: 6rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  animation: bounce 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.sp-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #ffffff, #ffeb3b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sp-hero p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Sports Stats */
+.sp-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: -2rem auto 3rem;
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+}
+
+.sp-stat {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-stat::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff5e62, #ff9966);
+}
+
+.sp-stat:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.sp-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #ff5e62, #ff9966);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sp-stat-text {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Section Headers */
+.sp-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.sp-section-icon {
+  font-size: 2.5rem;
+  color: white;
+  background: linear-gradient(135deg, #ff5e62, #ff9966);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(255, 94, 98, 0.3);
+}
+
+.sp-section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.sp-section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff5e62, #ff9966);
+  border-radius: 2px;
+}
+
+.sp-section-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+}
+
+/* Programs Section */
+.sp-programs-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 94, 98, 0.05), rgba(255, 153, 102, 0.05));
+}
+
+.sp-program-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sp-carousel-btn {
+  background: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff5e62;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sp-carousel-btn:hover {
+  background: linear-gradient(135deg, #ff5e62, #ff9966);
+  color: white;
+  transform: scale(1.1);
+}
+
+.sp-program-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-program-icon {
+  font-size: 3rem;
+  color: #ff5e62;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sp-program-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+.sp-program-desc {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.sp-eligibility h4, .sp-benefits h4 {
+  font-size: 1.2rem;
+  color: #ff5e62;
+  margin-bottom: 0.5rem;
+}
+
+.sp-eligibility p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.sp-benefits ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.sp-benefits li {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.sp-carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.sp-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sp-dot.active {
+  background: #ff5e62;
+  transform: scale(1.3);
+}
+
+/* Info Banner */
+.sp-info-banner {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.sp-info-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.sp-info-text {
+  flex: 2;
+}
+
+.sp-info-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.sp-info-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.sp-info-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sp-info-icon {
+  font-size: 10rem;
+  color: rgba(255, 94, 98, 0.2);
+}
+
+/* Categories Section */
+.sp-categories-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 94, 98, 0.05), rgba(255, 153, 102, 0.05));
+}
+
+.sp-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sp-category-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sp-category-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(255, 94, 98, 0.15);
+}
+
+.sp-category-icon {
+  font-size: 3rem;
+  color: #ff5e62;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.sp-category-card:hover .sp-category-icon {
+  transform: scale(1.2);
+  color: #ff9966;
+}
+
+.sp-category-card h3 {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+/* Facilities Section */
+.sp-facilities-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.sp-facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sp-facility-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.sp-facility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 94, 98, 0.3);
+}
+
+.sp-facility-icon {
+  font-size: 2.5rem;
+  color: #ff5e62;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  background: rgba(255, 94, 98, 0.1);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sp-facility-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.sp-facility-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Contact Section */
+.sp-contact-section {
+  background: linear-gradient(135deg, #ff5e62, #ff9966);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.sp-contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sp-contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sp-contact-btn {
+  background: white;
+  color: #ff5e62;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sp-contact-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .sp-info-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .sp-info-text {
+    order: 2;
+  }
+  
+  .sp-info-image {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sp-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: -1rem 1.5rem 2rem;
+  }
+  
+  .sp-hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .sp-hero p {
+    font-size: 1.2rem;
+  }
+  
+  .sp-section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .sp-facilities-grid,
+  .sp-categories-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sp-hero-icon {
+    font-size: 4rem;
+  }
+  
+  .sp-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .sp-hero p {
+    font-size: 1rem;
+  }
+  
+  .sp-program-carousel {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .sp-carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .sp-section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .sp-section-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  
+  .sp-contact-section h2 {
+    font-size: 2rem;
+  }
+  
+  .sp-contact-section p {
+    font-size: 1rem;
+  }
+  
+  .sp-contact-btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,620 @@
+/* LocalBusiness Component Styles - Vibrant & Professional Theme */
+
+.business-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.bus-hero {
+  background: linear-gradient(135deg, 
+    #3a7bd5 0%, 
+    #00d2ff 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  border-radius: 0 0 30% 30% / 80px;
+}
+
+.bus-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+.bus-hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bus-hero-icon {
+  font-size: 6rem;
+  margin-bottom: 1.5rem;
+  color: #FFD700;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.bus-hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #FFD700, #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bus-hero p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Business Stats */
+.bus-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: -2rem auto 3rem;
+  position: relative;
+  z-index: 10;
+  max-width: 1000px;
+}
+
+.bus-stat {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bus-stat::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+}
+
+.bus-stat:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.bus-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #3a7bd5, #00d2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bus-stat-text {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Section Headers */
+.bus-section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.bus-section-icon {
+  font-size: 2.5rem;
+  color: white;
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(58, 123, 213, 0.3);
+}
+
+.bus-section-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.bus-section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  border-radius: 2px;
+}
+
+.bus-section-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 700px;
+}
+
+/* Schemes Section */
+.bus-schemes-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(58, 123, 213, 0.05), rgba(0, 210, 255, 0.05));
+}
+
+.bus-scheme-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.bus-carousel-btn {
+  background: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: #3a7bd5;
+}
+
+.bus-carousel-btn:hover {
+  background: #3a7bd5;
+  color: white;
+  transform: scale(1.1);
+}
+
+.bus-scheme-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.bus-scheme-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 5px;
+  background: linear-gradient(to bottom, #3a7bd5, #00d2ff);
+}
+
+.bus-scheme-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #3a7bd5;
+  background: rgba(58, 123, 213, 0.1);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.bus-scheme-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.bus-scheme-desc {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.bus-eligibility, .bus-benefits {
+  margin-bottom: 1.5rem;
+}
+
+.bus-eligibility h4, .bus-benefits h4 {
+  font-size: 1.2rem;
+  color: #3a7bd5;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.bus-eligibility h4::before, .bus-benefits h4::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #FFD700;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.bus-eligibility p {
+  color: #555;
+  padding-left: 18px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.bus-benefits ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.bus-benefits li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 1rem;
+}
+
+.bus-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #3a7bd5;
+  font-weight: bold;
+}
+
+.bus-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.bus-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bus-dot.active {
+  background-color: #3a7bd5;
+  transform: scale(1.2);
+}
+
+/* Info Banner */
+.bus-info-banner {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+}
+
+.bus-info-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.bus-info-text {
+  flex: 1;
+}
+
+.bus-info-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.bus-info-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.bus-info-image {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bus-info-icon {
+  font-size: 15rem;
+  color: rgba(58, 123, 213, 0.1);
+}
+
+/* Business Types Grid */
+.bus-types-section {
+  padding: 4rem 2rem;
+}
+
+.bus-types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bus-type-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bus-type-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bus-type-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #3a7bd5;
+  background: rgba(58, 123, 213, 0.1);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.bus-type-card:hover .bus-type-icon {
+  background: #3a7bd5;
+  color: white;
+  transform: rotate(10deg);
+}
+
+.bus-type-card h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 0;
+}
+
+/* Resources Section */
+.bus-resources-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, rgba(58, 123, 213, 0.05), rgba(0, 210, 255, 0.05));
+}
+
+.bus-resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bus-resource-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bus-resource-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 0;
+  background: linear-gradient(90deg, #FFD700, #FFA500);
+  transition: all 0.3s ease;
+}
+
+.bus-resource-card:hover::before {
+  width: 100%;
+}
+
+.bus-resource-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bus-resource-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #3a7bd5;
+}
+
+.bus-resource-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.bus-resource-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Contact Section */
+.bus-contact-section {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.bus-contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+.bus-contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.bus-contact-section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.bus-contact-btn {
+  background: white;
+  color: #3a7bd5;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.bus-contact-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  background: #FFD700;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .bus-info-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bus-info-image {
+    flex: 0 0 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .bus-hero h1 {
+    font-size: 3rem;
+  }
+  
+  .bus-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: -1rem;
+  }
+  
+  .bus-scheme-carousel {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .bus-carousel-btn {
+    display: none;
+  }
+  
+  .bus-resources-grid, .bus-types-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .bus-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .bus-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .bus-section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .bus-stat-number {
+    font-size: 2rem;
+  }
+  
+  .bus-scheme-card {
+    padding: 1.5rem;
+  }
+  
+  .bus-info-text h2 {
+    font-size: 2rem;
+  }
+  
+  .bus-info-text p {
+    font-size: 1rem;
+  }
+}

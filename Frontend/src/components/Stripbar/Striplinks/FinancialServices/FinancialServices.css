@@ -1,0 +1,651 @@
+/* FinancialServices.css */
+
+.financial-services-container {
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+  overflow-x: hidden;
+}
+
+/* Header Section */
+.financial-header {
+  background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+  padding: 6rem 2rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.financial-header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.2;
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.financial-header h1 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.financial-header p {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Service Tabs */
+.services-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: -30px;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.services-tabs button {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 176, 155, 0.3);
+}
+
+.services-tabs button i {
+  font-size: 1.1rem;
+}
+
+.services-tabs button:hover:not(.active) {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 176, 155, 0.4);
+}
+
+.services-tabs button.active {
+  background: linear-gradient(135deg, #96c93d 0%, #00b09b 100%);
+  box-shadow: 0 4px 12px rgba(150, 201, 61, 0.4);
+}
+
+/* Services Content */
+.services-content {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tab-content h3 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #005f56;
+  position: relative;
+}
+
+.tab-content h3:after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  margin: 0.7rem auto;
+  border-radius: 2px;
+}
+
+/* Grants Section */
+.grant-cards, .loan-cards, .advisory-cards, .schemes-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.grant-card, .loan-card, .advisory-card, .scheme-card {
+  background: linear-gradient(135deg, #c9ffee 0%, #e6ffd4 100%);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grant-card:hover, .loan-card:hover, .advisory-card:hover, .scheme-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.grant-icon, .loan-icon, .advisory-icon, .scheme-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 10px rgba(0, 176, 155, 0.3);
+}
+
+.grant-card h4, .loan-card h4, .advisory-card h4, .scheme-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #005f56;
+}
+
+.grant-card p, .loan-card p, .advisory-card p, .scheme-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.grant-details, .loan-details, .scheme-details {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.grant-details li, .loan-details li, .scheme-details li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.grant-details span, .loan-details span, .scheme-details span {
+  font-weight: bold;
+  color: #005f56;
+}
+
+.apply-btn, .schedule-btn, .details-btn {
+  background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.apply-btn:hover, .schedule-btn:hover, .details-btn:hover {
+  background: linear-gradient(135deg, #009688 0%, #8bc34a 100%);
+  transform: translateY(-2px);
+}
+
+/* Grant Process */
+.grant-process {
+  background: linear-gradient(135deg, #b2ebf2 0%, #e0f7fa 100%);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.step {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.step h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  color: #005f56;
+}
+
+.step p {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Loan Eligibility */
+.loan-eligibility {
+  background: linear-gradient(135deg, #bbdefb 0%, #e3f2fd 100%);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.eligibility-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.eligibility-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.eligibility-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.eligibility-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #005f56;
+}
+
+.eligibility-content p {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Advisory Intro */
+.advisory-intro, .schemes-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.advisory-intro p, .schemes-intro p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.service-includes {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.service-includes li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.service-includes li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #00b09b;
+  font-weight: bold;
+}
+
+/* Expert Team */
+.expert-team {
+  background: linear-gradient(135deg, #c5e1a5 0%, #dcedc8 100%);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+.experts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.expert {
+  text-align: center;
+  max-width: 250px;
+}
+
+.expert-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+}
+
+.expert h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #005f56;
+}
+
+.expert-title {
+  font-size: 0.9rem;
+  color: #00796b;
+  margin-bottom: 0.7rem;
+  font-style: italic;
+}
+
+.expert p {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Document Assistance */
+.document-assistance {
+  background: linear-gradient(135deg, #ffccbc 0%, #ffecb3 100%);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.assistance-content h3 {
+  color: #e64a19;
+  margin-bottom: 1.2rem;
+}
+
+.assistance-content p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.assistance-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.assistance-btn {
+  background: linear-gradient(135deg, #ff5722 0%, #ff9800 100%);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.assistance-btn:hover {
+  background: linear-gradient(135deg, #e64a19 0%, #f57c00 100%);
+  transform: translateY(-2px);
+}
+
+/* Success Stories */
+.success-stories {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%);
+  text-align: center;
+}
+
+.stories-header {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.stories-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #0277bd;
+}
+
+.stories-header p {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.stories-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.story-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(3, 169, 244, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.image1 {
+  background-image: url('https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=600&q=80');
+}
+
+.image2 {
+  background-image: url('https://images.unsplash.com/photo-1526976668912-1a811878dd37?auto=format&fit=crop&w=600&q=80');
+}
+
+.image3 {
+  background-image: url('https://images.unsplash.com/photo-1638132704795-6bb223151bf7?fm=jpg&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3V0ZG9vciUyMGV2ZW50fGVufDB8fDB8fHww&ixlib=rb-4.1.0&q=60&w=3000');
+}
+
+.story-content {
+  padding: 2rem;
+}
+
+.story-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #0277bd;
+}
+
+.story-content p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  background: linear-gradient(135deg, #0288d1 0%, #03a9f4 100%);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more:hover {
+  background: linear-gradient(135deg, #0277bd 0%, #0288d1 100%);
+}
+
+/* Contact Form */
+.financial-contact {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%);
+  color: white;
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.form-group:nth-last-child(2) {
+  grid-column: span 2;
+}
+
+.form-group:last-child {
+  grid-column: span 2;
+  text-align: center;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: #005f56;
+  color: white;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.submit-btn:hover {
+  background: #004c44;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .financial-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .financial-header p {
+    font-size: 1.1rem;
+  }
+  
+  .services-tabs {
+    gap: 0.8rem;
+  }
+  
+  .services-tabs button {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .process-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-group:nth-last-child(2) {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .financial-header h1 {
+    font-size: 2rem;
+  }
+  
+  .tab-content h3 {
+    font-size: 1.7rem;
+  }
+  
+  .stories-header h2, .contact-content h2 {
+    font-size: 1.8rem;
+  }
+}

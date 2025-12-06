@@ -1,0 +1,296 @@
+/* Agriculture Support Component Styles with Indian Flag Theme */
+.agriculture-support-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* Header with Indian flag colors gradient */
+.ag-header {
+  background: linear-gradient(135deg, 
+    rgba(255, 153, 51, 0.9) 0%, 
+    rgba(255, 255, 255, 0.9) 50%, 
+    rgba(18, 136, 7, 0.9) 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 0 10px 10px;
+}
+
+.ag-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/farm-after.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+.ag-header-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #00394f;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+
+.ag-header-content p {
+  font-size: 1.3rem;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+
+/* Section styling */
+.ag-section {
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+}
+
+.ag-section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.ag-section-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #00394f;
+  position: relative;
+  display: inline-block;
+}
+
+.ag-section-header h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  bottom: -10px;
+  left: 20%;
+  background: linear-gradient(90deg, #FF9933, #FFFFFF, #128807);
+  border-radius: 2px;
+}
+
+.ag-section-header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Cards container */
+.ag-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Card styling */
+.ag-card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg, #FF9933, #FFFFFF, #128807);
+  border-image-slice: 1;
+}
+
+.ag-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.ag-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #00394f;
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.1), rgba(18, 136, 7, 0.1));
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.ag-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #00394f;
+}
+
+.ag-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Banner section */
+.ag-banner {
+  background: linear-gradient(90deg, 
+    rgba(255, 153, 51, 0.9) 0%, 
+    rgba(255, 255, 255, 0.8) 50%, 
+    rgba(18, 136, 7, 0.9) 100%);
+  padding: 3rem 2rem;
+  margin: 3rem 0;
+  border-radius: 10px;
+}
+
+.ag-banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ag-banner-text {
+  flex: 2;
+}
+
+.ag-banner-text h2 {
+  font-size: 2.2rem;
+  color: #00394f;
+  margin-bottom: 1rem;
+}
+
+.ag-banner-text p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.ag-banner-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ag-banner-icon {
+  font-size: 8rem;
+  color: #00394f;
+}
+
+/* Contact section */
+.ag-contact-section {
+  background-color: #f8f9fa;
+  padding: 3rem 2rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 2rem 0;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(90deg, #FF9933, #FFFFFF, #128807);
+  border-image-slice: 1;
+}
+
+.ag-contact-section h2 {
+  font-size: 2rem;
+  color: #00394f;
+  margin-bottom: 1rem;
+}
+
+.ag-contact-section p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .ag-header-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .ag-header-content p {
+    font-size: 1.1rem;
+  }
+  
+  .ag-section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .ag-banner-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .ag-banner-text h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ag-header {
+    padding: 3rem 1.5rem;
+  }
+  
+  .ag-header-content h1 {
+    font-size: 2.2rem;
+  }
+  
+  .ag-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ag-cards-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .ag-header-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .ag-header-content p {
+    font-size: 1rem;
+  }
+  
+  .ag-section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .ag-section-header p {
+    font-size: 1rem;
+  }
+  
+  .ag-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .ag-banner {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ag-banner-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .ag-banner-icon {
+    font-size: 6rem;
+  }
+  
+  .ag-contact-section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .ag-contact-section h2 {
+    font-size: 1.8rem;
+  }
+}

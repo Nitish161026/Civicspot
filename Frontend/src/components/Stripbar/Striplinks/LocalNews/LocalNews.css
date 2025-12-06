@@ -1,0 +1,364 @@
+/* LocalNews.css */
+.local-news-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Indian Flag Theme Header */
+.local-news-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+
+.local-news-header h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #000080; /* Navy Blue - Color from Ashoka Chakra */
+  margin: 10px 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flag-icon {
+  color: #FF9933; /* Saffron color */
+}
+
+.flag-stripe {
+  height: 12px;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.saffron {
+  background-color: #FF9933; /* Saffron color */
+  margin-bottom: 10px;
+}
+
+.green {
+  background-color: #138808; /* Green color */
+  margin-top: 10px;
+}
+
+/* Search Bar Styling */
+.news-search-bar {
+  margin-bottom: 25px;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+}
+
+.search-icon {
+  color: #555;
+  margin-right: 10px;
+}
+
+.search-input input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+}
+
+/* Categories Navigation */
+.news-categories {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px 5px;
+  margin-bottom: 25px;
+  scrollbar-width: thin;
+  scrollbar-color: #FF9933 #f1f1f1;
+}
+
+.news-categories::-webkit-scrollbar {
+  height: 5px;
+}
+
+.news-categories::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.news-categories::-webkit-scrollbar-thumb {
+  background: #FF9933;
+  border-radius: 10px;
+}
+
+.category-item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.category-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.category-item.active {
+  background: linear-gradient(135deg, #FF9933, #fff, #138808);
+  color: #000080;
+  font-weight: bold;
+}
+
+.category-icon {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.category-name {
+  font-size: 12px;
+  text-align: center;
+}
+
+/* News Content Area */
+.news-content {
+  position: relative;
+  min-height: 400px;
+}
+
+/* Ashoka Chakra Background */
+.news-ashoka-chakra {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.07;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.chakra-center {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #000080;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.chakra-spokes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.chakra-spoke {
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  background-color: #000080;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+}
+
+/* News List */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+/* News Card */
+.news-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 20px;
+  border-left: 4px solid #FF9933;
+  z-index: 1;
+}
+
+.news-card:nth-child(2n) {
+  border-left: 4px solid #000080;
+}
+
+.news-card:nth-child(3n) {
+  border-left: 4px solid #138808;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.news-card.expanded {
+  grid-column: 1 / -1;
+}
+
+.news-card-header {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.news-category-badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #FF9933;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.news-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.news-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.news-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.news-summary {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.news-full-content {
+  padding: 15px 0;
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.news-read-more {
+  background-color: transparent;
+  border: 1px solid #000080;
+  color: #000080;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.news-read-more:hover {
+  background-color: #000080;
+  color: white;
+}
+
+/* No News Found State */
+.no-news-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  color: #888;
+}
+
+.no-news-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+/* Footer Section */
+.local-news-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.disclaimer {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 11px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .local-news-container {
+    padding: 15px;
+  }
+  
+  .local-news-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .news-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-item {
+    min-width: 70px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .local-news-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .news-title {
+    font-size: 16px;
+  }
+  
+  .news-search-bar {
+    margin-bottom: 15px;
+  }
+}
